@@ -5,6 +5,8 @@ use App\Http\Controllers\ArticleController;
 
 Route::resource('articles', ArticleController::class);
 
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
+
 Auth::routes();
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
